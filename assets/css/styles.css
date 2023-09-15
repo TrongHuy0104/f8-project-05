@@ -41,6 +41,9 @@ a {
     min-width: 149px;
     height: var(--height);
     line-height: var(--height);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 0 16px;
     border-radius: 8px;
     background: var(--primary-purple-color);
@@ -75,6 +78,13 @@ a {
     height: 2px;
     background-color: var(--text-gray-color);
     margin-right: 12px;
+}
+
+.section-heading {
+    color: var(--primary-black-color);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.25;
 }
 
 /* Header */
@@ -167,19 +177,19 @@ a {
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.17;
-    margin-bottom: 20px;
 }
 
 .hero__heading--notice {
     color: var(--primary-purple-color);
 }
 
-.hero__desc {
+.hero__desc,
+.feature__desc {
     color: var(--text-gray-color);
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.67;
-    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .subscribe-form__group {
@@ -190,6 +200,7 @@ a {
     border-radius: 8px;
     background: #fff;
     box-shadow: 0px 16px 42px 0px rgba(0, 0, 0, 0.07);
+    margin-top: 40px;
 }
 
 .subscribe-form__input {
@@ -320,4 +331,276 @@ a {
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.375;
+}
+
+/* Feature */
+
+.feature {
+    padding: 80px 0;
+}
+
+.feature__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 160px;
+    align-items: center;
+}
+
+.feature__media-top .feature__decor {
+    position: absolute;
+    top: 76px;
+    left: 337px;
+    z-index: 1;
+}
+
+.feature__media-bottom .feature__decor {
+    position: absolute;
+    right: -138px;
+    bottom: 169px;
+    z-index: 2;
+}
+
+.feature__img-wrap {
+    width: 470px;
+    position: relative;
+}
+
+.feature__img-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-image: url(../imgs/feature-background_01.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    height: 90%;
+    width: 100%;
+}
+
+.feature__img-wrap-bottom::after {
+    background-image: url(../imgs/feature-background_02.svg);
+}
+
+.feature__img-wrap-bottom .feature__img {
+    width: 87%;
+}
+
+.feature__img {
+    position: relative;
+    z-index: 1;
+    width: 96%;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.feature-congratulation {
+    width: 226px;
+    height: 70px;
+    border-radius: 8px;
+    background: #fffdfa;
+    box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.07);
+    font-family: Inter, sans-serif;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 96px;
+    right: -100px;
+    column-gap: 10px;
+    z-index: 1;
+}
+
+.feature-congratulation__heading {
+    color: var(--primary-black-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.21;
+}
+
+.feature-congratulation__desc {
+    color: var(--text-gray-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 5px;
+}
+
+.feature__content {
+    max-width: 470px;
+    margin-left: auto;
+}
+
+.feature__content-middle {
+    margin-left: 0;
+}
+
+.feature__list {
+    margin-top: 70px;
+}
+
+.feature-item__heading {
+    color: var(--primary-black-color);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.feature-item__desc {
+    color: var(--text-gray-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin: 16px 0 30px;
+}
+
+.feature__desc {
+    margin-bottom: 28px;
+}
+
+.feature__notice {
+    color: var(--primary-black-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.feature__notice:first-child {
+    margin-top: 28px;
+}
+
+.feature__notice::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: var(--primary-purple-color);
+}
+
+.feature__cta {
+    margin-top: 38px;
+    background-color: var(--primary-black-color);
+}
+
+.feature__card-wrap {
+    width: 482px;
+    position: relative;
+}
+
+.feature__card {
+    width: 100%;
+    object-fit: cover;
+}
+
+.feature-bill {
+    width: 276px;
+    height: 86px;
+    padding: 23px 13px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.07);
+    position: absolute;
+    top: -48px;
+    right: -88px;
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+    font-family: Inter, sans-serif;
+}
+
+.feature-bill__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.feature-bill__icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fbefef;
+    border-radius: 50%;
+}
+
+.feature-bill__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feature-bill__title {
+    color: var(--primary-black-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.feature-bill__price {
+    color: var(--primary-black-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.feature-bill__desc,
+.feature-bill__date {
+    color: var(--text-gray-color);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 4px;
+}
+
+.feature-income {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    background: #439f90;
+    padding: 15px;
+    position: absolute;
+    right: -88px;
+    bottom: -55px;
+}
+
+.feature-income__icon {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-income__title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 14px;
+}
+
+.feature-income__price {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.25;
+    top: 6px;
+}
+
+.feature__payment {
+    width: 376px;
+    position: absolute;
+    right: -121px;
+    bottom: -34px;
+    z-index: 1;
 }
