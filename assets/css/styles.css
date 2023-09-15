@@ -76,7 +76,7 @@ a {
     display: inline-block;
     width: 18px;
     height: 2px;
-    background-color: var(--text-gray-color);
+    background-color: currentColor;
     margin-right: 12px;
 }
 
@@ -773,4 +773,143 @@ a {
     background-color: var(--primary-purple-color);
     border-color: var(--primary-purple-color);
     cursor: pointer;
+}
+
+/* Blog */
+
+.blog {
+    padding: 80px 0;
+    margin-bottom: 80px;
+}
+
+.blog__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog__cta {
+    min-width: 123px;
+    background-color: var(--primary-black-color);
+}
+
+.blog__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 70px;
+}
+
+/* Blog Item */
+
+.blog-item {
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+    border-radius: 12px;
+    border: 1px solid #dfe2e8;
+    background: #fff;
+    padding: 28px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.blog-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.07);
+}
+
+.blog-item__thumb {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+}
+
+.blog-item__date {
+    color: var(--text-gray-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.71;
+}
+
+.blog-item__heading {
+    color: var(--primary-black-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+    margin-top: 10px;
+}
+
+.blog-item__link {
+    color: var(--text-gray-color);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.625;
+    margin-top: 20px;
+    transition: color 0.2s;
+    display: inline-block;
+}
+
+.blog-item__link:hover {
+    color: var(--primary-purple-color);
+}
+
+/* Download */
+
+.download {
+    margin-bottom: 100px;
+}
+
+.download__inner {
+    position: relative;
+    border-radius: 24px;
+    background: var(--primary-purple-color);
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download__title,
+.download__desc,
+.download__heading {
+    color: #fff;
+    text-align: center;
+}
+
+.download__apps {
+    margin-top: 38px;
+    display: flex;
+    column-gap: 16px;
+}
+
+.download__app {
+    transition: opacity 0.2s;
+}
+
+.download__app:hover {
+    opacity: 0.9;
+}
+
+.download__decor {
+    position: absolute;
+}
+
+.download__decor:nth-of-type(1) {
+    top: 49px;
+    left: 112px;
+}
+.download__decor:nth-of-type(2) {
+    top: 49px;
+    right: 112px;
+}
+.download__decor:nth-of-type(3) {
+    bottom: 49px;
+    left: 166px;
+}
+.download__decor:nth-of-type(4) {
+    bottom: 49px;
+    right: 166px;
 }
